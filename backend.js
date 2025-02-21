@@ -7,7 +7,6 @@ const SERVER_PORT = process.env.PORT || 5000;
 server.use(cors());
 server.use(express.json());
 
-// Handling POST requests for processing input data
 server.post('/bfhl', (req, res) => {
     const { name, dob, data } = req.body;
     
@@ -29,7 +28,6 @@ server.post('/bfhl', (req, res) => {
     });
 });
 
-// Handling GET requests to fetch operation code
 server.get('/bfhl', (req, res) => {
     res.status(200).json({ operation_code: 1 });
 });
